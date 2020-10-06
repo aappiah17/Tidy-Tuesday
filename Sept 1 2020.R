@@ -1,7 +1,7 @@
 # Load libraries
 library(tidyverse)
 library(tidytuesdayR)
-install.packages("ggflags")
+devtools::install_github("rensa/ggflags")
 library(ggflags)
 library(gganimate)
 
@@ -91,4 +91,4 @@ anim = p + transition_time(Year)+
        x="Population", y="Cereal Yield (tonnes per hectare)",
        caption = "Chart by @CallmeAlfredo | Data from Our World in Data via #TidyTuesday")
 animate(anim, 100, fps = 25, end_pause = 20, width = 1400, height = 1000) 
-anim_save("Charts/top10_countries.gif")
+anim_save("Charts/top10_countries_Sep1.gif")
